@@ -7,5 +7,3 @@ addpath([pwd '/examples/CompanionFiles'])
 addpath([pwd '/modules/paramest'])
 addpath([pwd '/tests'])
 addpath([pwd '/data'])
-
-
