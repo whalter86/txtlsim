@@ -64,7 +64,8 @@ if strcmp(mode.add_dna_driver, 'Setup Species')
    
 %%%%%%%%%%%%%%%%%%% DRIVER MODE: Setup Reactions %%%%%%%%%%%%%%%%%%%%%%%%%%    
 elseif strcmp(mode.add_dna_driver, 'Setup Reactions')
-listOfSpecies = varargin{1};
+% listOfSpecies = varargin{1}; fixed bug? WH
+listOfSpecies = get(tube.species, 'name');
 p = regexp(listOfSpecies,'^protein AraC(-lva)?$', 'match');
 listOfProtein = vertcat(p{:});
 for k = 1:size(listOfProtein,1)
